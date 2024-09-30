@@ -10,7 +10,7 @@ const ImgGallery = () => {
           <Image
             source={{ uri: 'https://i.pinimg.com/originals/32/71/19/32711928e2fbf48fb4f10874cdd8aa83.gif' }}
             style={styles.image2}
-          />
+          />  
         </View>
       <View style={styles.gridRow}>
         <View style={styles.gridBox1}>
