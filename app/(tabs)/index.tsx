@@ -36,8 +36,8 @@ const App = () => {
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
       >
-        <ImageSlider2 />
-        <View style={styles.gridRow}>
+        <ImageSlider />
+        <View style={styles.gridRowD}>
           <TouchableOpacity style={styles.gridBoxss} onPress={() => navigation.navigate('Map' as never)}>
             <Ionicons name="walk" size={29} color="#FEF9D9" />
             <Text style={styles.TextD}>Walk</Text>

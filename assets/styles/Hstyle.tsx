@@ -73,6 +73,12 @@ export default StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
+  gridRowD: {
+    padding: 5,
+    width : '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
   gridBoxFood:{
     flex: 1,
     height: 100,
@@ -97,7 +103,7 @@ export default StyleSheet.create({
   gridBoxss: {
     flex: 1,
     height: 60,
-    width: 20,
+    width: 10,
     margin: 5,
     backgroundColor: '#8EACCD',
     alignItems: 'center',
@@ -216,7 +222,38 @@ export default StyleSheet.create({
     height: 200,  // Adjust as needed
     marginBottom: 10,
   },
-  
+  // ------------------------------Top Destination
+  selectedCategoryContainer: {
+    width: '95%',
+    marginTop: 20,
+    marginBottom: 50,
+    padding: 10,
+    backgroundColor: '#FFFBE6',
+    borderRadius: 25,
+},
+selectedCategoryTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 10,
+    textAlign: 'center',
+},
+selectedCategoryImage: {
+    width: '100%',
+    height: 200,
+    borderRadius: 10,
+    marginBottom: 10,
+},
+selectedCategoryDescription: {
+    backgroundColor: '#D2E0FB',
+    padding: 10,
+    width: '95%',
+    fontSize: 16,
+    color: 'black',
+    borderRadius: 10,
+    position: 'relative',
+    margin: 5,
+    marginEnd: 10,
+},
   // SliderModal
   modalBgSlider: {
     flex: 1,

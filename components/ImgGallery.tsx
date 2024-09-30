@@ -6,6 +6,12 @@ import styles from '@/assets/styles/Hstyle'; // Adjust the path if necessary
 const ImgGallery = () => {
   return (
     <>
+    <View style={styles.gridBox2}>
+          <Image
+            source={{ uri: 'https://i.pinimg.com/originals/32/71/19/32711928e2fbf48fb4f10874cdd8aa83.gif' }}
+            style={styles.image2}
+          />
+        </View>
       <View style={styles.gridRow}>
         <View style={styles.gridBox1}>
           <Image
@@ -25,12 +31,7 @@ const ImgGallery = () => {
       </View>
       {/* <Text style={styles.IgText}>Vigan City</Text> */}
       <View style={styles.gridRow}>
-        <View style={styles.gridBox2}>
-          <Image
-            source={{ uri: 'https://withlocals-com-res.cloudinary.com/image/upload/w_360,h_202,c_fill,g_auto,q_auto,dpr_3.0,f_auto/v1/destinations/philippines/Manila/HHG/AdobeStock_250477324' }}
-            style={styles.image2}
-          />
-        </View>
+        
         <View style={styles.gridBox1}>
           <Image
             source={{ uri: 'https://images.gmanews.tv/webpics/2020/12/GLF21_2020_12_17_07_42_46.jpg' }}

@@ -15,6 +15,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "@bounceapp/iframe": "^0.3.0",
     "@expo/vector-icons": "^14.0.3",
     "@react-google-maps/api": "^2.19.3",
     "@react-navigation/drawer": "^6.7.2",
