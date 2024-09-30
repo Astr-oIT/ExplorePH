@@ -1,0 +1,306 @@
+// styles.js
+import { StyleSheet } from 'react-native';
+
+export default StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100%',
+    backgroundColor: '#D2E0FB',
+  },
+  scrollContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  card: {
+    height: 250,
+    marginVertical: 0,
+    marginHorizontal: 5,
+    borderRadius: 15,
+    overflow: 'hidden',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  textContainer: {
+    flex: 0,
+    top: 0,
+    left: 0,
+    position: 'absolute',
+    backgroundColor: '#FEF9D9',  // semi-transparent white
+    paddingHorizontal: 24,
+    paddingVertical: 8,
+    borderRadius: 15,
+    shadowColor: '#000',  // Optional for better glass effect
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.2,
+    shadowRadius: 0.41,
+    elevation: 2,
+    borderColor: 'black',
+  },
+  
+  infoText: {
+    color: 'black',
+    fontSize: 16,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    backgroundColor: 'transparent',
+  },
+  normalDot: {
+    height: 8,
+    width: 8,
+    borderRadius: 4,
+    backgroundColor: 'lightblue',
+    marginHorizontal: 4,
+  },
+  indicatorContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 10,
+  },
+  gridContainer: {
+    flex: 1,
+    flexDirection: 'column',
+    margin: 15,
+    backgroundColor: 'transparent',
+    padding: 5,
+    borderRadius: 5,
+  },
+  gridRow: {
+    margin: 5,
+    width : '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  gridBoxFood:{
+    flex: 1,
+    height: 100,
+    width: 150,
+    marginHorizontal: 4,
+    backgroundColor: '#75d660c4',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 15,
+
+  },
+  gridBox: {
+    flex: 1,
+    height: 150,
+    width: 150,
+    marginHorizontal: 4,
+    backgroundColor: '#75d660c4',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 15,
+  },
+  gridBoxss: {
+    flex: 1,
+    height: 60,
+    width: 20,
+    margin: 5,
+    backgroundColor: '#8EACCD',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 5,
+    borderRadius: 15,
+  },
+  TextD:{
+    color: '#FEF9D9',
+  },
+  gridBoxs: {
+    flex: 2,
+    height: 150,
+    marginHorizontal: 4,
+    backgroundColor: '#75d660c4',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 15,
+  },
+  TextTop: {
+    bottom: 0,
+    flex: 1,
+    fontSize: 15,
+    fontWeight: 'bold',
+    right: -8,
+    textAlign: 'left',
+    color: '#8EACCD',
+    backgroundColor: '#D2E0FB',
+    paddingRight: 15,
+    padding: 8,
+    borderRadius: 10,
+    borderBottomLeftRadius: 0,
+    position: 'absolute',
+  },
+  Texts: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'left',
+    marginTop: 10,
+    marginLeft: 20,
+  },
+  IgText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginTop: 5,
+    marginBottom: 10,
+    color: 'blue',
+  },
+  image: {
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover',
+    left: 0,
+    position: 'absolute',
+    borderRadius: 15,
+  },
+  gridBox2: {
+    flex: 1,
+    height: 150,
+    overflow: 'hidden',
+    marginHorizontal: 4,
+    backgroundColor: '#75d660c4',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 15,
+  },
+  gridBox1: {
+    flex: 1,
+    height: 200,
+    margin: 5,
+    backgroundColor: '#75d660c4',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 15,
+  },
+  image2: {
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover',
+    left: 0,
+    position: 'absolute',
+    borderRadius: 15,
+  },
+  // MODAL
+  modalBackground: {
+    flex: 1,
+    marginTop: '40%',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    backgroundColor: 'white', // Semi-transparent background
+  },
+  modalContainer: {
+    width: '90%',
+    backgroundColor: 'white',
+    padding: 20,
+    borderRadius: 10,
+    alignItems: 'center',
+  },
+  modalImage: {
+    width: '100%',
+    height: 300,
+    resizeMode: 'contain',
+  },
+  closeButton: {
+    alignSelf: 'flex-end',
+    padding: 5,
+  },
+  closeButtonText: {
+    color: 'gray',
+    fontWeight:'900',
+    fontSize: 20,
+  },
+  video: {
+    width: '100%',
+    height: 200,  // Adjust as needed
+    marginBottom: 10,
+  },
+  
+  // SliderModal
+  modalBgSlider: {
+    flex: 1,
+    marginTop: '82%',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    borderTopLeftRadius: 50,
+    borderTopRightRadius: 50,
+    backgroundColor: '#eff6f9 ', // Semi-transparent background
+  },
+  modalCSlider: {
+    flex: 1,
+    width: '100%',
+    backgroundColor: '#eff6f9',
+    borderTopLeftRadius: 50,
+    borderTopRightRadius: 50,
+    alignItems: 'center',
+  },
+  modalImageSlider: {
+    width: '100%',
+    height: 200,
+  
+  },
+  closeButtonSlider: {
+    alignSelf: 'auto',
+    padding: 5,
+  },
+  closeButtonTextS: {
+    color: 'blue',
+    fontWeight: 'bold',
+    fontSize: 16,
+  },
+  modalContentSlider: {
+    width: '100%',
+    padding: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  modalTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 10,
+    color: 'black',
+    textAlign: 'center',
+  },
+  modalDescription: {
+    fontSize: 16,
+    color: 'gray',
+    textAlign: 'center',
+  },
+  modalMap: {
+    width: '100%',
+    height: 200,
+    marginTop: 20,
+    borderRadius: 50,
+  },
+  modalWebView: {
+    width: '100%',
+    height: 300, // Adjust this height as needed
+    borderRadius: 10, // Optional: for rounded corners
+    marginTop: 10,
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 10,
+  },
+  button: {
+    flex: 1,
+    padding: 10,
+    marginHorizontal: 5,
+    backgroundColor: '#007BFF',
+    borderRadius: 5,
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: '#FFFFFF',
+    fontSize: 16,
+  },
+  // END MODAL
+  carousel:{
+    flex: 1,
+    position: 'relative',
+    width: '50%',
+    height: 100,
+  }
+});
