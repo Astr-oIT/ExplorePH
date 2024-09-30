@@ -14,7 +14,7 @@ import {
 
 const TopDestination = () => {
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-    const scrollX = useRef(new Animated.Value(0)).current; // Create scrollX Animated.Value
+    const scrollX = useRef(new Animated.Value(5)).current; // Create scrollX Animated.Value
     const fadeAnim = useRef(new Animated.Value(0)).current; // Create fadeAnim Animated.Value
 
     const categories = [
@@ -36,11 +36,7 @@ const TopDestination = () => {
         },
         { name: 'Monument', 
           imageUri: 'https://thumbs.dreamstime.com/b/rizal-monument-park-manila-was-built-to-commemorate-filipino-nationalist-jos%C3%A9-was-83317353.jpg',
-          no1:'1: Mount Apo, Davao',
-          no2:'2: Mount Dulang-Dulang, Bukidnon',
-          no3: '3: Mount Pulag, Benguet',
-          no4:'4: Mount Kitanglad, Bukidnon',
-          no5: '5: Mount Kalatungan, Bukidnon'
+    
          },
         { name: 'Mountain', imageUri: 'https://media-cdn.tripadvisor.com/media/photo-s/07/ff/75/d7/view-of-benguet-from.jpg',
             no1:'1: Mount Apo, Davao',
@@ -51,19 +47,11 @@ const TopDestination = () => {
          },
         { name: 'HotSpring', 
           imageUri: 'https://leisureopportunities.co.uk/images/HIGH436928_838902.jpg',
-          no1:'1: El Nido, Palawan',
-          no2:'2: Boracay',
-          no3: '3: Alona Beach, Panglao',
-          no4:'4: Kayangan Lake, Coron',
-          no5: '5: Saud Beach, Luzon'
+
         },
         { name: 'Volcano', 
             imageUri: 'https://pinaywise.com/wp-content/uploads/2024/02/Dormant-Volcanoes-In-The-Philippines.jpg',
-            no1:'1: El Nido, Palawan',
-            no2:'2: Boracay',
-            no3: '3: Alona Beach, Panglao',
-            no4:'4: Kayangan Lake, Coron',
-            no5: '5: Saud Beach, Luzon'
+
           }
     ];
 

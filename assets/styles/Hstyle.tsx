@@ -171,6 +171,17 @@ export default StyleSheet.create({
     justifyContent: 'center',
     borderRadius: 15,
   },
+  gifImg: {
+    flex: 0,
+    height: 200,
+    width: '100%',
+    overflow: 'hidden',
+    marginHorizontal: 4,
+    backgroundColor: '#75d660c4',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 15,
+  },
   gridBox1: {
     flex: 1,
     height: 200,

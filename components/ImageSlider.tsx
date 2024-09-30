@@ -12,7 +12,7 @@ import {
 import { AntDesign } from '@expo/vector-icons';
 import MapView, { Marker } from 'react-native-maps'; // Import MapView and Marker
 import styles from '../assets/styles/Hstyle';
-
+import { useNavigation } from '@react-navigation/native';
 const images = [
   {
     url: 'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
@@ -47,6 +47,7 @@ const images = [
 ];
 
 const ImageSlider = () => {
+  const navigation = useNavigation();
   const scrollX = useRef(new Animated.Value(0)).current;
   const { width: windowWidth } = useWindowDimensions();
 
@@ -158,7 +159,7 @@ const ImageSlider = () => {
                   <TouchableOpacity style={styles.button} onPress={() => {/* Handle 'More' button press */}}>
                     <Text style={styles.buttonText}>More</Text>
                   </TouchableOpacity>
-                  <TouchableOpacity style={styles.button} onPress={() => {/* Handle 'Show in Map' button press */}}>
+                  <TouchableOpacity style={styles.button} onPress={() => {}}>
                     <Text style={styles.buttonText}>Show in Map</Text>
                   </TouchableOpacity>
                 </View>

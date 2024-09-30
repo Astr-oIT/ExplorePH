@@ -6,7 +6,7 @@ import styles from '@/assets/styles/Hstyle'; // Adjust the path if necessary
 const ImgGallery = () => {
   return (
     <>
-    <View style={styles.gridBox2}>
+    <View style={styles.gifImg}>
           <Image
             source={{ uri: 'https://i.pinimg.com/originals/32/71/19/32711928e2fbf48fb4f10874cdd8aa83.gif' }}
             style={styles.image2}
