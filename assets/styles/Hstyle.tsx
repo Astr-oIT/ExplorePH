@@ -10,6 +10,7 @@ export default StyleSheet.create({
     backgroundColor: '#D2E0FB',
   },
   scrollContainer: {
+    marginTop: 5,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -350,5 +351,24 @@ selectedCategoryDescription: {
     position: 'relative',
     width: '50%',
     height: 100,
-  }
+  },
+  CText: {
+    fontSize: 30,
+    marginTop: 10,
+    marginBottom: 10,
+    marginRight: '50%',
+    color: 'black',
+    textAlign: 'right',
+    display: 'flex',
+  },
+  CcText: {
+    fontSize: 30,
+    fontWeight: 'bold',
+    marginTop: 5,
+    textAlign: 'right',
+    marginRight: '10%',
+    marginBottom: 10,
+  
+    color: 'black',
+  },
 });

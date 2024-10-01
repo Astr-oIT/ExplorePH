@@ -14,6 +14,17 @@ import MapView, { Marker } from 'react-native-maps'; // Import MapView and Marke
 import styles from '../assets/styles/Hstyle';
 import { useNavigation } from '@react-navigation/native';
 const images = [
+
+  {
+    url: 'https://i.pinimg.com/originals/be/aa/60/beaa600f32c00584682a24730525a5d4.gif',
+    title: 'Boracay',
+    description:
+      "Boracay is a small island in the central Philippines. It's known for its resorts and beaches. Along the west coast, White Beach is backed by palm trees, bars and restaurants.",
+    location: {
+      latitude: 11.9674,
+      longitude: 121.9248,
+    },
+  },
   {
     url: 'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
     title: 'El Nido, Palawan',
@@ -22,16 +33,6 @@ const images = [
     location: {
       latitude: 11.1784,
       longitude: 119.3913,
-    },
-  },
-  {
-    url: 'https://www.exploreshaw.com/wp-content/uploads/2019/04/DSCF9807.jpg',
-    title: 'Boracay',
-    description:
-      "Boracay is a small island in the central Philippines. It's known for its resorts and beaches. Along the west coast, White Beach is backed by palm trees, bars and restaurants.",
-    location: {
-      latitude: 11.9674,
-      longitude: 121.9248,
     },
   },
   {
@@ -92,7 +93,7 @@ const ImageSlider = () => {
             <ImageBackground source={{ uri: image.url }} style={styles.card}>
               <View style={styles.textContainer}>
                 <Text style={styles.infoText}>
-                  {image.title} <AntDesign name="star" size={15} color="yellow" />
+                  {image.title} <AntDesign name="star" size={15} color="#E4D00A" />
                 </Text>
               </View>
             </ImageBackground>

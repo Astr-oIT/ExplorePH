@@ -36,6 +36,11 @@ const TopDestination = () => {
         },
         { name: 'Monument', 
           imageUri: 'https://thumbs.dreamstime.com/b/rizal-monument-park-manila-was-built-to-commemorate-filipino-nationalist-jos%C3%A9-was-83317353.jpg',
+          no1:'1: Lapu Lapu, Cebu',
+          no2:'2: Mount Samat National Shrine, Bataan',
+          no3: '3: Heritage Of Cebu',
+          no4:'4: Statue of the Divine Mercy',
+          no5: '5: Memorare Manila Monument'
     
          },
         { name: 'Mountain', imageUri: 'https://media-cdn.tripadvisor.com/media/photo-s/07/ff/75/d7/view-of-benguet-from.jpg',
@@ -47,10 +52,15 @@ const TopDestination = () => {
          },
         { name: 'HotSpring', 
           imageUri: 'https://leisureopportunities.co.uk/images/HIGH436928_838902.jpg',
+           
 
         },
         { name: 'Volcano', 
             imageUri: 'https://pinaywise.com/wp-content/uploads/2024/02/Dormant-Volcanoes-In-The-Philippines.jpg',
+
+          },
+          { name: 'Rice terraces', 
+            imageUri: 'https://cdn.britannica.com/98/150498-050-C7E45C90/Banaue-rice-terraces-Luzon-Philippines.jpg',
 
           }
     ];
@@ -103,12 +113,12 @@ const TopDestination = () => {
 
             {selectedCategory && (
                 <Animated.View style={[styles.selectedCategoryContainer, { opacity: fadeAnim }]}>
-                    <Text style={styles.selectedCategoryTitle}>{selectedCategory}</Text>
+                    <Text style={styles.selectedCategoryTitle}>{selectedCategory}<AntDesign name="star" size={15} color="#E4D00A" /><AntDesign name="star" size={15} color="#E4D00A" /><AntDesign name="star" size={15} color="#E4D00A" /><AntDesign name="star" size={15} color="#E4D00A" /><AntDesign name="star" size={15} color="#E4D00A" /></Text>
                     {categories
                         .filter(category => category.name === selectedCategory)
                         .map((category, index) => (
                             <>
-                            <Text style={[styles.selectedCategoryDescription]}>{category.no1} <AntDesign name="star" size={15} color="white" /><AntDesign name="star" size={15} color="white" /></Text>
+                            <Text style={[styles.selectedCategoryDescription]}>{category.no1} </Text>
                             <Text style={[styles.selectedCategoryDescription]}>{category.no2}</Text>
                             <Text style={[styles.selectedCategoryDescription]}>{category.no3}</Text>
                             <Text style={[styles.selectedCategoryDescription]}>{category.no4}</Text>

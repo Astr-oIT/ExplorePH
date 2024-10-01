@@ -12,13 +12,11 @@ const User = () => {
     <ScrollView
     
     >
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', top: 0 }}>
-      <Text style={[styles.Texts, { color: colorScheme === 'dark' ? 'black' : 'black' }]}>
-          More Destination
-        </Text>
+    
+      
       <ImgGallery />
 
-    </View>
+
     </ScrollView>
     </SafeAreaView>
   );

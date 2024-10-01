@@ -3,10 +3,10 @@ import React from 'react';
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs'; 
 import Entypo from '@expo/vector-icons/Entypo';
 import AntDesign from '@expo/vector-icons/AntDesign';
-
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 const TabBar: React.FC<BottomTabBarProps> = ({ state, descriptors, navigation }) => {
   const primaryColor = '#0891b2';
-  const greyColor = '#000';
+  const greyColor = '#808080';
   const skyBlue = '#87CEEB'; 
 
   return (
@@ -41,13 +41,13 @@ const TabBar: React.FC<BottomTabBarProps> = ({ state, descriptors, navigation })
 
         if (route.name === 'index') {
           iconName = 'home';
-          IconComponent = AntDesign;
+          IconComponent = Entypo;
         } else if (route.name === 'Map') {
           iconName = 'map';
           IconComponent = Entypo;
         } else if (route.name === 'user') {
-          iconName = 'images';
-          IconComponent = Entypo;
+          iconName = 'category';
+          IconComponent = MaterialIcons;
         }
 
        
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
   mapTabContainer: {
     position: 'absolute',
     justifyContent: 'center',
-    color: 'black',
+    color: '#808080',
     left: '42%', 
     top: -20, // Moves the map icon slightly above the tab bar
   },

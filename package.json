@@ -21,6 +21,7 @@
     "@react-navigation/drawer": "^6.7.2",
     "@react-navigation/native": "^6.1.18",
     "@react-navigation/stack": "^6.4.1",
+    "@rneui/themed": "^4.0.0-rc.8",
     "@vis.gl/react-google-maps": "^1.2.0",
     "expo": "~51.0.31",
     "expo-av": "~14.0.7",
