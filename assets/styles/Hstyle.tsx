@@ -236,7 +236,7 @@ export default StyleSheet.create({
   },
   // ------------------------------Top Destination
   selectedCategoryContainer: {
-    width: '95%',
+    width: '100%',
     marginTop: 20,
     marginBottom: 50,
     padding: 10,
