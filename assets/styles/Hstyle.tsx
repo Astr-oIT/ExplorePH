@@ -134,7 +134,7 @@ export default StyleSheet.create({
     color: '#8EACCD',
     backgroundColor: '#D2E0FB',
     paddingRight: 15,
-    padding: 8,
+    padding: 9,
     borderRadius: 10,
     borderBottomLeftRadius: 0,
     position: 'absolute',

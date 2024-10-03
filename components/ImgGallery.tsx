@@ -39,7 +39,10 @@ const ImgGallery = () => {
     const imagesToDisplay = searchQuery ? filteredImages : images;
 
     return (
-        <View style={styles.categoriesContainer}>
+       
+        <ScrollView style={styles.container}>
+
+            <View style={styles.categoriesContainer}>
             <Text style={styles.CText}>
           Explore the
         </Text>
@@ -60,8 +63,9 @@ const ImgGallery = () => {
             <TouchableOpacity style={styles.filterButton}>
                     <Ionicons name="filter-outline" style={styles.fliterIcon} />
                 </TouchableOpacity>
-        <ScrollView style={styles.container}>
-           
+                
+                </View>
+
             <View style={styles.gridRow}>
                 {imagesToDisplay.map((image, index) => (
                     <View key={index} style={styles.gridBox}>
@@ -73,16 +77,18 @@ const ImgGallery = () => {
                 ))}
             </View>
         </ScrollView>
-        </View>
+     
     );
 };
 
 const styles = StyleSheet.create({
     container: {
+        width: '100%',
         padding: 10,
     },
     categoriesContainer: {
         marginBottom: 10,
+        width: 400,
     },
     CText: {
         fontSize: 30,
@@ -122,9 +128,9 @@ const styles = StyleSheet.create({
     },
     filterButton: {
         position: 'absolute',
-        marginTop: '30%',
+        marginTop: '29%',
         color: '#FEF9D9',
-        right: 20,
+        right: 40,
         marginLeft: 10,
         width: 50,
         padding: 10,
@@ -138,6 +144,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
     },
     gridRow: {
+        width: 360,
         flexDirection: 'row',
         flexWrap: 'wrap',
         justifyContent: 'space-around',

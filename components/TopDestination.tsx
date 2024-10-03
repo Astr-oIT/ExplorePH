@@ -88,46 +88,42 @@ const TopDestination = () => {
                     )}
                     scrollEventThrottle={16}
                 >
-                    {categories.map((category, index) => (
-                        <TouchableOpacity 
-                            key={index} 
-                            style={styles.gridBox} 
-                            onPress={() => {
-                                if (selectedCategory === category.name) {
-                                    setSelectedCategory(null); // Deselect if the same category is clicked
-                                } else {
-                                    setSelectedCategory(category.name);
-                                    fadeAnim.setValue(0); // Reset fade animation
-                                }
-                            }}
-                        >
-                            <Image
-                                source={{ uri: category.imageUri }}
-                                style={styles.image}
-                            />
-                            <Text style={styles.TextTop}>{category.name}</Text>
-                        </TouchableOpacity>
-                    ))}
+                    {categories.map((category) => (
+    <TouchableOpacity 
+        key={category.name} 
+        style={styles.gridBox} 
+        onPress={() => {
+            if (selectedCategory === category.name) {
+                setSelectedCategory(null); // Deselect if the same category is clicked
+            } else {
+                setSelectedCategory(category.name);
+                fadeAnim.setValue(0); // Reset fade animation
+            }
+        }}
+    >
+        <Image
+            source={{ uri: category.imageUri }}
+            style={styles.image}
+        />
+        <Text style={styles.TextTop}>{category.name}</Text>
+    </TouchableOpacity>
+))}
+
                 </Animated.ScrollView>
             </View>
-
-            {selectedCategory && (
-                <Animated.View style={[styles.selectedCategoryContainer, { opacity: fadeAnim }]}>
-                    <Text style={styles.selectedCategoryTitle}>{selectedCategory}<AntDesign name="star" size={15} color="#E4D00A" /><AntDesign name="star" size={15} color="#E4D00A" /><AntDesign name="star" size={15} color="#E4D00A" /><AntDesign name="star" size={15} color="#E4D00A" /><AntDesign name="star" size={15} color="#E4D00A" /></Text>
-                    {categories
-                        .filter(category => category.name === selectedCategory)
-                        .map((category, index) => (
-                            <>
-                            <Text style={[styles.selectedCategoryDescription]}>{category.no1} </Text>
-                            <Text style={[styles.selectedCategoryDescription]}>{category.no2}</Text>
-                            <Text style={[styles.selectedCategoryDescription]}>{category.no3}</Text>
-                            <Text style={[styles.selectedCategoryDescription]}>{category.no4}</Text>
-                            <Text style={[styles.selectedCategoryDescription]}>{category.no5}</Text>
-                            </>
-                            
-                        ))}
-                </Animated.View>
-            )}
+            <Animated.View style={[styles.selectedCategoryContainer, { opacity: fadeAnim }]}>
+            {categories
+    .filter(category => category.name === selectedCategory)
+    .map((category, index) => (
+        <React.Fragment key={category.name}> 
+            <Text style={[styles.selectedCategoryDescription]}>{category.no1} </Text>
+            <Text style={[styles.selectedCategoryDescription]}>{category.no2}</Text>
+            <Text style={[styles.selectedCategoryDescription]}>{category.no3}</Text>
+            <Text style={[styles.selectedCategoryDescription]}>{category.no4}</Text>
+            <Text style={[styles.selectedCategoryDescription]}>{category.no5}</Text>
+        </React.Fragment>
+    ))}
+      </Animated.View>
         </View>
     )
 }
