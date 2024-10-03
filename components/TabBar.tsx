@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
     top: -20, // Moves the map icon slightly above the tab bar
   },
   mapTabContainer2: {
-    width: 50,
+    width: 60,
     position: 'absolute',
     justifyContent: 'center',
     color: 'black',

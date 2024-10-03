@@ -116,7 +116,6 @@ const TopDestination = () => {
     .filter(category => category.name === selectedCategory)
     .map((category, index) => (
         <React.Fragment key={category.name}> 
-        
             <Text style={[styles.selectedCategoryDescription]}>{category.no1} </Text>
             <Text style={[styles.selectedCategoryDescription]}>{category.no2}</Text>
             <Text style={[styles.selectedCategoryDescription]}>{category.no3}</Text>
