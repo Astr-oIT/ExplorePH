@@ -52,16 +52,29 @@ const TopDestination = () => {
          },
         { name: 'HotSpring', 
           imageUri: 'https://leisureopportunities.co.uk/images/HIGH436928_838902.jpg',
+            no1:'1: 88 Hot Spring Resort',
+            no2:'2: Maquinit Hot Spring',
+            no3: '3: Puning Hot Spring',
+            no4:'4: Luisa Ridge Hot Spring',
+            no5: '5: Panicuason Hot Spring'
            
 
         },
         { name: 'Volcano', 
             imageUri: 'https://pinaywise.com/wp-content/uploads/2024/02/Dormant-Volcanoes-In-The-Philippines.jpg',
-
+            no1:'1: Taal Volcano',
+            no2:'2: Mount Mayon',
+            no3: '3: Mount Pinatubo',
+            no4:'4: Babuyan Claro',
+            no5: '5: Mount Bulusan'
           },
           { name: 'Rice terraces', 
             imageUri: 'https://cdn.britannica.com/98/150498-050-C7E45C90/Banaue-rice-terraces-Luzon-Philippines.jpg',
-
+            no1:'1: Rice Terrace Clusters of Banaue. Battad. Bangaan.',
+            no2:'2: Rice Terrace Clusters of Mayoyao. Mayoyao Central',
+            no3: '3: Rice Terrace Clusters of Kiangan. Nagacadan',
+            no4:'4: Rice Terrace Clusters of Hungduan',
+            no5: '5: Panicuason Hot Spring'
           }
     ];
 

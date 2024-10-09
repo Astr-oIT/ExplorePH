@@ -7,6 +7,7 @@ import {
     ScrollView,
     StyleSheet,
     TouchableOpacity,
+    Modal,
 } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -15,15 +16,15 @@ import { HelloWave } from './HelloWave';
 const ImgGallery = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [filteredImages, setFilteredImages] = useState<{ uri: string; label: string }[]>([]);
+    const [modalVisible, setModalVisible] = useState(false);
+    const [selectedImage, setSelectedImage] = useState<{ uri: string; label: string } | null>(null);
 
     const images = [
         { uri: 'https://miro.medium.com/v2/resize:fit:1400/0*QrVegfBJTMkA-qKB', label: 'Vigan City' },
         { uri: 'https://images.gmanews.tv/webpics/2020/12/GLF21_2020_12_17_07_42_46.jpg', label: 'Pampanga' },
         { uri: 'https://www.awnwtravel.com/uploads/5/6/2/0/5620327/manila-6_orig.jpg', label: 'Rizal Park' },
         { uri: 'https://images.summitmedia-digital.com/cosmo/images/2020/02/07/hot-air-balloon-festival-clark-1581041244.jpg', label: 'Rizal Park' },
-        // Add more images as needed
     ];
-
     const handleSearch = (query: string) => {
         setSearchQuery(query);
         if (query === '') {
@@ -35,13 +36,16 @@ const ImgGallery = () => {
             setFilteredImages(filtered);
         }
     };
-
+    const handleImagePress = (image: { uri: string; label: string }) => {
+        setSelectedImage(image);
+        setModalVisible(true);
+    };
     const imagesToDisplay = searchQuery ? filteredImages : images;
 
-    return (
-       
-        <ScrollView style={styles.container}>
 
+    return (
+        <View style={styles.container}>
+            <ScrollView>
             <View style={styles.categoriesContainer}>
             <Text style={styles.CText}>
           Explore the
@@ -64,20 +68,39 @@ const ImgGallery = () => {
                     <Ionicons name="filter-outline" style={styles.fliterIcon} />
                 </TouchableOpacity>
                 
+                
                 </View>
+                <View style={styles.gridRow}>
+                    {imagesToDisplay.map((image, index) => (
+                        <TouchableOpacity key={index} style={styles.gridBox} onPress={() => handleImagePress(image)}>
+                            <Image source={{ uri: image.uri }} style={styles.image2} />
+                        </TouchableOpacity>
+                    ))}
+                </View>
+            </ScrollView>
 
-            <View style={styles.gridRow}>
-                {imagesToDisplay.map((image, index) => (
-                    <View key={index} style={styles.gridBox}>
-                        <Image
-                            source={{ uri: image.uri }}
-                            style={styles.image2}
-                        />
+            {selectedImage && (
+                <Modal
+                    animationType="slide"
+                    transparent={true}
+                    visible={modalVisible}
+                    onRequestClose={() => {
+                        setModalVisible(!modalVisible);
+                    }}
+                >
+                    <View style={styles.modalView}>
+                        <Image source={{ uri: selectedImage.uri }} style={styles.modalImage} />
+                        <Text style={styles.modalText}>{selectedImage.label}</Text>
+                        <TouchableOpacity
+                            style={styles.closeButton}
+                            onPress={() => setModalVisible(!modalVisible)}
+                        >
+                            <Text style={styles.closeButtonText}>Close</Text>
+                        </TouchableOpacity>
                     </View>
-                ))}
-            </View>
-        </ScrollView>
-     
+                </Modal>
+            )}
+        </View>
     );
 };
 
@@ -164,6 +187,32 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
         borderRadius: 10,
+    },
+    modalView: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+    },
+    modalImage: {
+        width: 300,
+        height: 300,
+        borderRadius: 10,
+    },
+    modalText: {
+        fontSize: 20,
+        color: 'white',
+        marginTop: 10,
+    },
+    closeButton: {
+        marginTop: 20,
+        padding: 10,
+        backgroundColor: '#8EACCD',
+        borderRadius: 10,
+    },
+    closeButtonText: {
+        color: 'white',
+        fontSize: 16,
     },
 });
 
