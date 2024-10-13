@@ -43,8 +43,8 @@ export const images = [
         loc: 'Palawan, Philippines'
       },
       no2: {
-        title2: '2: Boracay',
-        img:'https://media.philstar.com/images/articles/gen2-boracay_2018-10-13_23-31-49.jpg',
+        title2: 'Boracay',
+        img:'https://images.unsplash.com/photo-1595944963975-cbff4f0d404f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGJvcmFjYXl8ZW58MHx8MHx8fDA%3D',
         des: 'Famous for its white sandy beaches and vibrant nightlife.',
         loc: 'Aklan, Philippines'
       },

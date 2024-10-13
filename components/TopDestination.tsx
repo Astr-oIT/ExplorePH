@@ -87,16 +87,16 @@ const TopDestination = () => {
                                 <Text style={[styles.selectedCategoryDescription]}>1:{category.no1.title2}</Text>
                             </TouchableOpacity>
                             <TouchableOpacity onPress={() => openModal(category.no2)}>
-                                <Text style={[styles.selectedCategoryDescription]}>{category.no2.title2}</Text>
+                                <Text style={[styles.selectedCategoryDescription]}>2:{category.no2.title2}</Text>
                             </TouchableOpacity>
                             <TouchableOpacity onPress={() => openModal(category.no3)}>
-                                <Text style={[styles.selectedCategoryDescription]}>{category.no3.title2}</Text>
+                                <Text style={[styles.selectedCategoryDescription]}>3:{category.no3.title2}</Text>
                             </TouchableOpacity>
                             <TouchableOpacity onPress={() => openModal(category.no4)}>
-                                <Text style={[styles.selectedCategoryDescription]}>{category.no4.title2}</Text>
+                                <Text style={[styles.selectedCategoryDescription]}>4:{category.no4.title2}</Text>
                             </TouchableOpacity>
                             <TouchableOpacity onPress={() => openModal(category.no5)}>
-                                <Text style={[styles.selectedCategoryDescription]}>{category.no5.title2}</Text>
+                                <Text style={[styles.selectedCategoryDescription]}>5:{category.no5.title2}</Text>
                             </TouchableOpacity>
                         </React.Fragment>
                     ))}
@@ -111,14 +111,19 @@ const TopDestination = () => {
                     <View style={styles.modalContainer}>
                     
                             <Image source={{ uri: modalContent.img }} style={styles.modalImage} />
-                            <TouchableOpacity onPress={closeModal} style={styles.closeButton}>
-                                <Text style={styles.closeButtonText}>_____</Text>
-                            </TouchableOpacity>
+                            <View style={styles.modalTopHearder} >
+                            <Text style={styles.modalTitleSub}>{modalContent.name}</Text>
+                            <Text style={styles.modalTitleheader}>{modalContent.title2}</Text>
+                            </View>
                         <View style={styles.modalContentTopD}>
-                            <Text style={styles.modalTitle}>{modalContent.title2}</Text>
+                        <TouchableOpacity onPress={closeModal} style={styles.closeButton}>
+                                <Text style={styles.closeButtonText}>Close</Text>
+                            </TouchableOpacity>
+                            <View style={styles.modalContentTopDes}>
+                           
                             <Text style={styles.modalDescription}>{modalContent.des}</Text>
                             <Text style={styles.modalTitle}>{modalContent.loc}</Text>
-                            
+                            </View>
                         </View>
                     </View>
                 </Modal>

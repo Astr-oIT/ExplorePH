@@ -227,6 +227,7 @@ export default StyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    margin: 5,
   },
   closeButtonText: {
     display: 'flex',
@@ -305,12 +306,20 @@ selectedCategoryDescription: {
     fontWeight: 'bold',
     fontSize: 16,
   },
+  modalTopHearder: {
+    top: 100,
+    width: '100%',
+    padding: 10,
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+  },
   modalContentTopD: {
     bottom: '-60%',
     display: 'flex',
     backgroundColor: 'rgba(255, 255, 255, 0.8)', // White with transparency
     borderRadius: 10,
     width: '90%',
+    margin: 0,
     padding: 10,
     justifyContent: 'center',
     alignItems: 'center',
@@ -319,6 +328,12 @@ selectedCategoryDescription: {
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
+},
+modalContentTopDes: {
+  backgroundColor: 'rgba(255, 255, 255, 1.8)', // White with transparency
+  width: '100%',
+  padding: 10,
+    borderRadius: 10,
 },
   modalContentSlider: {
     width: '100%',
@@ -329,6 +344,19 @@ selectedCategoryDescription: {
   modalTitle: {
     fontSize: 20,
     fontWeight: 'bold',
+    marginBottom: 10,
+    color: 'black',
+    textAlign: 'center',
+  },
+  modalTitleSub: {
+    fontSize: 10,
+    fontWeight: '900',
+    color: 'black',
+    textAlign: 'center',
+  },
+  modalTitleheader: {
+    fontSize: 25,
+    fontWeight: '900',
     marginBottom: 10,
     color: 'black',
     textAlign: 'center',
