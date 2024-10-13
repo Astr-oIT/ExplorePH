@@ -31,3 +31,246 @@ export const images = [
       },
     },
   ];
+
+  export const categories = [
+    {
+      name: 'Beaches',
+      imageUri: 'https://philippinetourismusa.com/wp-content/uploads/2021/09/Bantayan-Island-Cebu_1.jpg',
+      no1: {
+        title2: 'El Nido, Palawan',
+        img:'https://www.journeyera.com/wp-content/uploads/2019/05/big-lagoon-el-nido-palawan-.jpg',
+        des: 'A beautiful beach known for its crystal clear waters and stunning limestone cliffs.',
+        loc: 'Palawan, Philippines'
+      },
+      no2: {
+        title2: '2: Boracay',
+        img:'https://media.philstar.com/images/articles/gen2-boracay_2018-10-13_23-31-49.jpg',
+        des: 'Famous for its white sandy beaches and vibrant nightlife.',
+        loc: 'Aklan, Philippines'
+      },
+      no3: {
+        title2: '3: Alona Beach, Panglao',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'A popular beach destination with great diving spots and resorts.',
+        loc: 'Bohol, Philippines'
+      },
+      no4: {
+        title2: '4: Kayangan Lake, Coron',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'Known for its clear waters and scenic views, perfect for snorkeling and diving.',
+        loc: 'Palawan, Philippines'
+      },
+      no5: {
+        title2: '5: Saud Beach, Luzon',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'A serene beach with fine white sand and clear blue waters.',
+        loc: 'Ilocos Norte, Philippines'
+      }
+    },
+    {
+      name: 'Waterfalls',
+      imageUri: 'https://i0.wp.com/theficklefeet.com/wp-content/uploads/2020/09/kaparkan-falls-3.jpg?resize=845%2C634&ssl=1',
+      no1: {
+        title2: '1: Kawasan Falls, Cebu',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'A beautiful beach known for its crystal clear waters and stunning limestone cliffs.',
+        loc: 'Palawan, Philippines'
+      },
+      no2: {
+        title2: '2: Boracay',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'Famous for its white sandy beaches and vibrant nightlife.',
+        loc: 'Aklan, Philippines'
+      },
+      no3: {
+        title2: '3: Alona Beach, Panglao',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'A popular beach destination with great diving spots and resorts.',
+        loc: 'Bohol, Philippines'
+      },
+      no4: {
+        title2: '4: Kayangan Lake, Coron',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'Known for its clear waters and scenic views, perfect for snorkeling and diving.',
+        loc: 'Palawan, Philippines'
+      },
+      no5: {
+        title2: '5: Saud Beach, Luzon',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'A serene beach with fine white sand and clear blue waters.',
+        loc: 'Ilocos Norte, Philippines'
+      }
+    },
+    {
+      name: 'Monument',
+      imageUri: 'https://thumbs.dreamstime.com/b/rizal-monument-park-manila-was-built-to-commemorate-filipino-nationalist-jos%C3%A9-was-83317353.jpg',
+      no1: {
+        title2: '1: Kawasan Falls, Cebu',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'A beautiful beach known for its crystal clear waters and stunning limestone cliffs.',
+        loc: 'Palawan, Philippines'
+      },
+      no2: {
+        title2: '2: Boracay',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'Famous for its white sandy beaches and vibrant nightlife.',
+        loc: 'Aklan, Philippines'
+      },
+      no3: {
+        title2: '3: Alona Beach, Panglao',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'A popular beach destination with great diving spots and resorts.',
+        loc: 'Bohol, Philippines'
+      },
+      no4: {
+        title2: '4: Kayangan Lake, Coron',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'Known for its clear waters and scenic views, perfect for snorkeling and diving.',
+        loc: 'Palawan, Philippines'
+      },
+      no5: {
+        title2: '5: Saud Beach, Luzon',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'A serene beach with fine white sand and clear blue waters.',
+        loc: 'Ilocos Norte, Philippines'
+      }
+    },
+    {
+      name: 'Mountain',
+      imageUri: 'https://media-cdn.tripadvisor.com/media/photo-s/07/ff/75/d7/view-of-benguet-from.jpg',
+      no1: {
+        title2: '1: Kawasan Falls, Cebu',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'A beautiful beach known for its crystal clear waters and stunning limestone cliffs.',
+        loc: 'Palawan, Philippines'
+      },
+      no2: {
+        title2: '2: Boracay',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'Famous for its white sandy beaches and vibrant nightlife.',
+        loc: 'Aklan, Philippines'
+      },
+      no3: {
+        title2: '3: Alona Beach, Panglao',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'A popular beach destination with great diving spots and resorts.',
+        loc: 'Bohol, Philippines'
+      },
+      no4: {
+        title2: '4: Kayangan Lake, Coron',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'Known for its clear waters and scenic views, perfect for snorkeling and diving.',
+        loc: 'Palawan, Philippines'
+      },
+      no5: {
+        title2: '5: Saud Beach, Luzon',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'A serene beach with fine white sand and clear blue waters.',
+        loc: 'Ilocos Norte, Philippines'
+      }
+    },
+    {
+      name: 'HotSpring',
+      imageUri: 'https://leisureopportunities.co.uk/images/HIGH436928_838902.jpg',
+      no1: {
+        title2: '1: Kawasan Falls, Cebu',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'A beautiful beach known for its crystal clear waters and stunning limestone cliffs.',
+        loc: 'Palawan, Philippines'
+      },
+      no2: {
+        title2: '2: Boracay',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'Famous for its white sandy beaches and vibrant nightlife.',
+        loc: 'Aklan, Philippines'
+      },
+      no3: {
+        title2: '3: Alona Beach, Panglao',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'A popular beach destination with great diving spots and resorts.',
+        loc: 'Bohol, Philippines'
+      },
+      no4: {
+        title2: '4: Kayangan Lake, Coron',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'Known for its clear waters and scenic views, perfect for snorkeling and diving.',
+        loc: 'Palawan, Philippines'
+      },
+      no5: {
+        title2: '5: Saud Beach, Luzon',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'A serene beach with fine white sand and clear blue waters.',
+        loc: 'Ilocos Norte, Philippines'
+      }
+    },
+    {
+      name: 'Volcano',
+      imageUri: 'https://pinaywise.com/wp-content/uploads/2024/02/Dormant-Volcanoes-In-The-Philippines.jpg',
+      no1: {
+        title2: '1: Kawasan Falls, Cebu',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'A beautiful beach known for its crystal clear waters and stunning limestone cliffs.',
+        loc: 'Palawan, Philippines'
+      },
+      no2: {
+        title2: '2: Boracay',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'Famous for its white sandy beaches and vibrant nightlife.',
+        loc: 'Aklan, Philippines'
+      },
+      no3: {
+        title2: '3: Alona Beach, Panglao',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'A popular beach destination with great diving spots and resorts.',
+        loc: 'Bohol, Philippines'
+      },
+      no4: {
+        title2: '4: Kayangan Lake, Coron',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'Known for its clear waters and scenic views, perfect for snorkeling and diving.',
+        loc: 'Palawan, Philippines'
+      },
+      no5: {
+        title2: '5: Saud Beach, Luzon',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'A serene beach with fine white sand and clear blue waters.',
+        loc: 'Ilocos Norte, Philippines'
+      }
+    },
+    {
+      name: 'Rice terraces',
+      imageUri: 'https://cdn.britannica.com/98/150498-050-C7E45C90/Banaue-rice-terraces-Luzon-Philippines.jpg',
+      no1: {
+        title2: '1: Kawasan Falls, Cebu',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'A beautiful beach known for its crystal clear waters and stunning limestone cliffs.',
+        loc: 'Palawan, Philippines'
+      },
+      no2: {
+        title2: '2: Boracay',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'Famous for its white sandy beaches and vibrant nightlife.',
+        loc: 'Aklan, Philippines'
+      },
+      no3: {
+        title2: '3: Alona Beach, Panglao',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'A popular beach destination with great diving spots and resorts.',
+        loc: 'Bohol, Philippines'
+      },
+      no4: {
+        title2: '4: Kayangan Lake, Coron',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'Known for its clear waters and scenic views, perfect for snorkeling and diving.',
+        loc: 'Palawan, Philippines'
+      },
+      no5: {
+        title2: '5: Saud Beach, Luzon',
+        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        des: 'A serene beach with fine white sand and clear blue waters.',
+        loc: 'Ilocos Norte, Philippines'
+      }
+    },
+   
+    
+];

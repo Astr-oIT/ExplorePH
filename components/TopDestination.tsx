@@ -10,73 +10,18 @@ import {
     TouchableOpacity,  
     useColorScheme,
     Animated, // Import Animated
+    Modal, // Import Modal
 } from 'react-native';
+import {categories} from '@/constants/index'
 
 const TopDestination = () => {
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+    const [modalVisible, setModalVisible] = useState(false);
+    const [modalContent, setModalContent] = useState<{
+        [x: string]: string | undefined; title2: string, des: string, loc: string 
+} | null>(null);
     const scrollX = useRef(new Animated.Value(5)).current; // Create scrollX Animated.Value
     const fadeAnim = useRef(new Animated.Value(0)).current; // Create fadeAnim Animated.Value
-
-    const categories = [
-        { name: 'Beaches', 
-          imageUri: 'https://philippinetourismusa.com/wp-content/uploads/2021/09/Bantayan-Island-Cebu_1.jpg',
-          no1:'1: El Nido, Palawan',
-          no2:'2: Boracay',
-          no3: '3: Alona Beach, Panglao',
-          no4:'4: Kayangan Lake, Coron',
-          no5: '5: Saud Beach, Luzon'
-         },
-        { name: 'Waterfalls', 
-          imageUri: 'https://i0.wp.com/theficklefeet.com/wp-content/uploads/2020/09/kaparkan-falls-3.jpg?resize=845%2C634&ssl=1',
-          no1:'1: Kawasan Falls, Cebu',
-          no2:'2: Tumalog Falls, Cebu',
-          no3: '3: Cambugahay Falls, Siquijor',
-          no4:'4: Pagsanjan Falls, Laguna',
-          no5: '5: Tinago Falls, Iligan'
-        },
-        { name: 'Monument', 
-          imageUri: 'https://thumbs.dreamstime.com/b/rizal-monument-park-manila-was-built-to-commemorate-filipino-nationalist-jos%C3%A9-was-83317353.jpg',
-          no1:'1: Lapu Lapu, Cebu',
-          no2:'2: Mount Samat National Shrine, Bataan',
-          no3: '3: Heritage Of Cebu',
-          no4:'4: Statue of the Divine Mercy',
-          no5: '5: Memorare Manila Monument'
-    
-         },
-        { name: 'Mountain', imageUri: 'https://media-cdn.tripadvisor.com/media/photo-s/07/ff/75/d7/view-of-benguet-from.jpg',
-            no1:'1: Mount Apo, Davao',
-            no2:'2: Mount Dulang-Dulang, Bukidnon',
-            no3: '3: Mount Pulag, Benguet',
-            no4:'4: Mount Kitanglad, Bukidnon',
-            no5: '5: Mount Kalatungan, Bukidnon'
-         },
-        { name: 'HotSpring', 
-          imageUri: 'https://leisureopportunities.co.uk/images/HIGH436928_838902.jpg',
-            no1:'1: 88 Hot Spring Resort',
-            no2:'2: Maquinit Hot Spring',
-            no3: '3: Puning Hot Spring',
-            no4:'4: Luisa Ridge Hot Spring',
-            no5: '5: Panicuason Hot Spring'
-           
-
-        },
-        { name: 'Volcano', 
-            imageUri: 'https://pinaywise.com/wp-content/uploads/2024/02/Dormant-Volcanoes-In-The-Philippines.jpg',
-            no1:'1: Taal Volcano',
-            no2:'2: Mount Mayon',
-            no3: '3: Mount Pinatubo',
-            no4:'4: Babuyan Claro',
-            no5: '5: Mount Bulusan'
-          },
-          { name: 'Rice terraces', 
-            imageUri: 'https://cdn.britannica.com/98/150498-050-C7E45C90/Banaue-rice-terraces-Luzon-Philippines.jpg',
-            no1:'1: Rice Terrace Clusters of Banaue. Battad. Bangaan.',
-            no2:'2: Rice Terrace Clusters of Mayoyao. Mayoyao Central',
-            no3: '3: Rice Terrace Clusters of Kiangan. Nagacadan',
-            no4:'4: Rice Terrace Clusters of Hungduan',
-            no5: '5: Panicuason Hot Spring'
-          }
-    ];
 
     useEffect(() => {
         if (selectedCategory) {
@@ -87,6 +32,16 @@ const TopDestination = () => {
             }).start();
         }
     }, [selectedCategory]);
+
+    const openModal = (content: { title2: string, des: string, loc: string }) => {
+        setModalContent(content);
+        setModalVisible(true);
+    };
+
+    const closeModal = () => {
+        setModalVisible(false);
+        setModalContent(null);
+    };
 
     return (
         <View style={styles.scrollContainer}>
@@ -102,41 +57,72 @@ const TopDestination = () => {
                     scrollEventThrottle={16}
                 >
                     {categories.map((category) => (
-    <TouchableOpacity 
-        key={category.name} 
-        style={styles.gridBox} 
-        onPress={() => {
-            if (selectedCategory === category.name) {
-                setSelectedCategory(null); // Deselect if the same category is clicked
-            } else {
-                setSelectedCategory(category.name);
-                fadeAnim.setValue(0); // Reset fade animation
-            }
-        }}
-    >
-        <Image
-            source={{ uri: category.imageUri }}
-            style={styles.image}
-        />
-        <Text style={styles.TextTop}>{category.name}</Text>
-    </TouchableOpacity>
-))}
-
+                        <TouchableOpacity 
+                            key={category.name} 
+                            style={styles.gridBox} 
+                            onPress={() => {
+                                if (selectedCategory === category.name) {
+                                    setSelectedCategory(null); // Deselect if the same category is clicked
+                                } else {
+                                    setSelectedCategory(category.name);
+                                    fadeAnim.setValue(0); // Reset fade animation
+                                }
+                            }}
+                        >
+                            <Image
+                                source={{ uri: category.imageUri }}
+                                style={styles.image}
+                            />
+                            <Text style={styles.TextTop}>{category.name}</Text>
+                        </TouchableOpacity>
+                    ))}
                 </Animated.ScrollView>
             </View>
             <Animated.View style={[styles.selectedCategoryContainer, { opacity: fadeAnim }]}>
-            {categories
-    .filter(category => category.name === selectedCategory)
-    .map((category, index) => (
-        <React.Fragment key={category.name}> 
-            <Text style={[styles.selectedCategoryDescription]}>{category.no1} </Text>
-            <Text style={[styles.selectedCategoryDescription]}>{category.no2}</Text>
-            <Text style={[styles.selectedCategoryDescription]}>{category.no3}</Text>
-            <Text style={[styles.selectedCategoryDescription]}>{category.no4}</Text>
-            <Text style={[styles.selectedCategoryDescription]}>{category.no5}</Text>
-        </React.Fragment>
-    ))}
-      </Animated.View>
+                {categories
+                    .filter(category => category.name === selectedCategory)
+                    .map((category, index) => (
+                        <React.Fragment key={category.name}> 
+                            <TouchableOpacity onPress={() => openModal(category.no1)}>
+                                <Text style={[styles.selectedCategoryDescription]}>1:{category.no1.title2}</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity onPress={() => openModal(category.no2)}>
+                                <Text style={[styles.selectedCategoryDescription]}>{category.no2.title2}</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity onPress={() => openModal(category.no3)}>
+                                <Text style={[styles.selectedCategoryDescription]}>{category.no3.title2}</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity onPress={() => openModal(category.no4)}>
+                                <Text style={[styles.selectedCategoryDescription]}>{category.no4.title2}</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity onPress={() => openModal(category.no5)}>
+                                <Text style={[styles.selectedCategoryDescription]}>{category.no5.title2}</Text>
+                            </TouchableOpacity>
+                        </React.Fragment>
+                    ))}
+            </Animated.View>
+            {modalContent && (
+                <Modal
+                    animationType="slide"
+                    transparent={true}
+                    visible={modalVisible}
+                    onRequestClose={closeModal}
+                >
+                    <View style={styles.modalContainer}>
+                    
+                            <Image source={{ uri: modalContent.img }} style={styles.modalImage} />
+                            <TouchableOpacity onPress={closeModal} style={styles.closeButton}>
+                                <Text style={styles.closeButtonText}>_____</Text>
+                            </TouchableOpacity>
+                        <View style={styles.modalContentTopD}>
+                            <Text style={styles.modalTitle}>{modalContent.title2}</Text>
+                            <Text style={styles.modalDescription}>{modalContent.des}</Text>
+                            <Text style={styles.modalTitle}>{modalContent.loc}</Text>
+                            
+                        </View>
+                    </View>
+                </Modal>
+            )}
         </View>
     )
 }
