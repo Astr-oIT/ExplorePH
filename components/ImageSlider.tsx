@@ -10,16 +10,25 @@ import {
   ImageBackground,
 } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
-import MapView, { Marker } from 'react-native-maps'; // Import MapView and Marker
+import { WebView } from 'react-native-webview'; // Import WebView
 import styles from '../assets/styles/Hstyle';
 import { useNavigation } from '@react-navigation/native';
 import { images } from '../constants/index';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../components/navigation/types';
+import { RootStackParamList } from './navigation/types';
 
 type ImageSliderNavigationProp = StackNavigationProp<RootStackParamList, 'index'>;
 
 const ImageSlider = () => {
+  const [firstModalVisible, setFirstModalVisible] = useState(false);
+  const [secondModalVisible, setSecondModalVisible] =  useState<{
+    url: string;
+    title: string;
+    description: string;
+    location: { mapUrl: string };
+  } | null>(null);
+
+ 
   const navigation = useNavigation<ImageSliderNavigationProp>();
   const scrollX = useRef(new Animated.Value(0)).current;
   const { width: windowWidth } = useWindowDimensions();
@@ -29,19 +38,30 @@ const ImageSlider = () => {
     url: string;
     title: string;
     description: string;
-    location: { latitude: number; longitude: number };
+    location: { mapUrl: string };
   } | null>(null); // State for selected image object
 
-  // Function to open modal with the selected image's details
-  const openModal = (image: { url: string; title: string; description: string; location: { latitude: number; longitude: number; } }) => {
-    setSelectedImage(image); // Store the full image object
-    setModalVisible(true);
+  const toggleFirstModal = (image: { url: string; title: string; description: string; location: { mapUrl: string; } }) => {
+    setSelectedImage(image);
+    setFirstModalVisible(!firstModalVisible);
   };
+
+  const openSecondModal = (image: { url: string; title: string; description: string; location: { mapUrl: string; } }) => {
+      setFirstModalVisible(false);
+      setSecondModalVisible(image);
+  };
+
+  const closeSecondModal = () => {
+      setSecondModalVisible(null);
+  };
+
 
   // Function to close modal
   const closeModal = () => {
-    setModalVisible(false);
-    setSelectedImage(null);
+    setFirstModalVisible(!firstModalVisible);
+  };
+  const toggleModal = () => {
+    setModalVisible(!modalVisible);
   };
 
   return (
@@ -60,7 +80,7 @@ const ImageSlider = () => {
           <TouchableOpacity
             key={imageIndex}
             style={{ width: windowWidth }}
-            onPress={() => openModal(image)} // Open modal with the full image object
+            onPress={() => toggleFirstModal(image)} // Open modal with the full image object
           >
             <ImageBackground source={{ uri: image.url }} style={styles.card}>
               <View style={styles.textContainer}>
@@ -90,52 +110,35 @@ const ImageSlider = () => {
 
       {/* Modal to display the selected image's title, description, and map */}
       <Modal
-        visible={modalVisible}
+        visible={firstModalVisible}
         transparent={true}
         animationType="slide"
         onRequestClose={closeModal}
       >
-        <View style={styles.modalBgSlider}>
-          <View style={styles.modalCSlider}>
+        <View style={styles.modalContentSlider}>
+          <View style={styles.modalBody}>
             <TouchableOpacity 
               onPress={closeModal} 
-              onPressIn={closeModal} 
-              style={styles.closeButtonSlider}
+              style={{ alignSelf: 'flex-end', padding: 10 }}
             >
-              <Text style={styles.closeButtonText}>____</Text>
+              <Text style={{ fontSize: 18 }}>Close</Text>
             </TouchableOpacity>
             
             {/* Display title and description in the modal */}
             {selectedImage && (
-              <View style={styles.modalContentSlider}>
+              <View>
                 <Text style={styles.modalTitle}>{selectedImage.title}</Text>
                 <Text style={styles.modalDescription}>{selectedImage.description}</Text>
 
-                {/* Map displaying the location */}
-                <MapView
-                  style={styles.modalMap}
-                  initialRegion={{
-                    latitude: selectedImage.location.latitude,
-                    longitude: selectedImage.location.longitude,
-                    latitudeDelta: 0.05,
-                    longitudeDelta: 0.05,
-                  }}
-                  mapType="satellite"
-                >
-                  <Marker
-                    coordinate={{
-                      latitude: selectedImage.location.latitude,
-                      longitude: selectedImage.location.longitude,
-                    }}
-                    title={selectedImage.title}
-                  />
-                </MapView>
 
-                {/* Buttons below the map */}
-                <View style={styles.buttonContainer}>
-                  <TouchableOpacity style={styles.button} onPress={() => {/* Handle 'More' button press */}}>
-                    <Text style={styles.buttonText}>More</Text>
+                {/* WebView displaying the Google Maps iframe */}
+                
+                    {/* Buttons below the map */}
+                    <View style={styles.buttonContainer}>
+                  <TouchableOpacity style={styles.button}  onPress={() => openSecondModal(selectedImage)} >
+                    <Text style={styles.buttonText}>View</Text>
                   </TouchableOpacity>
+                  
                   <TouchableOpacity 
                     style={styles.button} 
                     onPress={() => {
@@ -149,6 +152,52 @@ const ImageSlider = () => {
               </View>
             )}
           </View>
+        </View>
+      </Modal>
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={secondModalVisible !== null}
+        onRequestClose={toggleModal}
+      >
+        <View style={styles.modalView}>
+          <Text style={styles.modalText}>This is the modal content</Text>
+          <TouchableOpacity onPress={closeSecondModal}>
+            <Text style={styles.closeButtonText}>Close</Text>
+          </TouchableOpacity>
+          <View style={{ width: '100%', height: '100%', backgroundColor: 'blue' }}>
+                  {selectedImage && (
+                    <WebView
+                      style={{ flex: 1 }} // Ensure the WebView takes up the full space of its container
+                      originWhitelist={['*']}
+                      javaScriptEnabled={true} // Enable JavaScript
+                      onError={(syntheticEvent) => {
+                        const { nativeEvent } = syntheticEvent;
+                        console.warn('WebView error: ', nativeEvent);
+                      }}
+                      onLoadStart={() => console.log('WebView loading started')}
+                      onLoadEnd={() => console.log('WebView loading finished')}
+                      source={{
+                        html: `
+                          <!DOCTYPE html>
+                          <html>
+                            <body style="margin:0;padding:0;">
+                              <iframe 
+                                src="${selectedImage.location.mapUrl}" 
+                                width="100%" 
+                                height="2000" 
+                                style="border:20;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                              </iframe>
+                            </body>
+                          </html>
+                        `,
+                      }}
+                    />
+                  )}
+                </View>
         </View>
       </Modal>
     </View>

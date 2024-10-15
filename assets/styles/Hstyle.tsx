@@ -336,11 +336,44 @@ modalContentTopDes: {
     borderRadius: 10,
 },
   modalContentSlider: {
-    width: '100%',
-    padding: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
+    flex: 1, 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    height: '69%',
+    backgroundColor: 'rgba(0,0,0,0)',
+    padding: 0,
   },
+  modalBody:{
+    marginTop: '105%',
+    width: '100%', 
+    height: '68%',
+    backgroundColor: 'white', 
+    padding: 10, 
+    borderRadius: 25
+  },
+
+  // 2nd Modal
+  modalView: {
+    margin: 0,
+    height: '100%',
+    backgroundColor: 'white',
+    borderRadius: 20,
+    padding: 0,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  modalText: {
+    marginBottom: 15,
+    textAlign: 'center',
+  },
+  // 2nd End Modal
   modalTitle: {
     fontSize: 20,
     fontWeight: 'bold',
@@ -386,9 +419,9 @@ modalContentTopDes: {
     marginTop: 10,
   },
   buttonContainer: {
+    top: '50%',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: 10,
   },
   button: {
     flex: 1,

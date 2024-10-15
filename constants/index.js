@@ -5,7 +5,7 @@ export const images = [
     description:
       "Boracay is a small island in the central Philippines. It's known for its resorts and beaches. Along the west coast, White Beach is backed by palm trees, bars and restaurants.",
     location: {
-      mapUrl: 'https://www.google.com/maps/embed?pb=!4v1728976557080!6m8!1m7!1s6_VPhIh_dHuGJnndAZp4LQ!2m2!1d11.97649636471485!2d121.9117314805544!3f242.8456901966399!4f-3.719438877345766!5f0.7820865974627469',
+      mapUrl: 'https://www.google.com/maps/embed?pb=!4v1728983763083!6m8!1m7!1sCAoSLEFGMVFpcE55RlhMY3A3ZGNEUnpVX1c1TXdzUHY3SFBZRXdHV3RTM2lvV0ly!2m2!1d11.97148601508802!2d121.9164850051762!3f286.5659223510206!4f12.575865110177759!5f0.7820865974627469',
     },
   },
   {
@@ -14,7 +14,7 @@ export const images = [
     description:
       'El Nido is a Philippine municipality on Palawan island. It’s known for white-sand beaches, coral reefs and as the gateway to the Bacuit archipelago, a group of islands with steep karst cliffs.',
     location: {
-      mapUrl: 'https://www.google.com/maps/embed?pb=!4v1728976557080!6m8!1m7!1s6_VPhIh_dHuGJnndAZp4LQ!2m2!1d11.97649636471485!2d121.9117314805544!3f242.8456901966399!4f-3.719438877345766!5f0.7820865974627469',
+      mapUrl: 'https://www.google.com/maps/embed?pb=!4v1728981642554!6m8!1m7!1sCAoSLEFGMVFpcE1JaVNMb2J5Z2dkRlBMZTZOTXkxbFJZVllWaGlyVUFWUUM5ai1U!2m2!1d11.0763413080439!2d119.3845600069068!3f78.06329667474661!4f-7.4665727664605726!5f0.7820865974627469',
     },
   },
   {
@@ -23,7 +23,7 @@ export const images = [
     description:
       'Panglao is the southernmost town of Bohol. It is one of the 2 towns on Panglao Island, the other being Dauis. It is of historical significance in that it was the place where the Spaniards went after an unfortunate experience in Cebu.',
     location: {
-      mapUrl: 'https://www.google.com/maps/embed?pb=!4v1728976557080!6m8!1m7!1s6_VPhIh_dHuGJnndAZp4LQ!2m2!1d11.97649636471485!2d121.9117314805544!3f242.8456901966399!4f-3.719438877345766!5f0.7820865974627469',
+      mapUrl: 'https://www.google.com/maps/embed?pb=!4v1728981923853!6m8!1m7!1sCAoSLEFGMVFpcFA1VUFCbEQzclo4dzZsY2hJUy1RSXZ6NGY2ckZvTmRSWUxsdmZY!2m2!1d9.548741882952559!2d123.7742826404618!3f84.8684252928978!4f8.611210918268867!5f0.7820865974627469',
     },
   },
 ];
