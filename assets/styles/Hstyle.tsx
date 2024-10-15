@@ -349,12 +349,19 @@ modalContentTopDes: {
     textAlign: 'center',
   },
   modalTitleSub: {
+
+  
     fontSize: 10,
     fontWeight: '900',
     color: 'black',
     textAlign: 'center',
   },
   modalTitleheader: {
+    width: 'auto',
+    padding: 10,
+    backgroundColor: 'white',
+    borderRadius: 15,
+    height: 50,
     fontSize: 25,
     fontWeight: '900',
     marginBottom: 10,
