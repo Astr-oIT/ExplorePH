@@ -377,6 +377,7 @@ modalContentTopDes: {
   modalTitle: {
     fontSize: 20,
     fontWeight: 'bold',
+    marginTop: 10,
     marginBottom: 10,
     color: 'black',
     textAlign: 'center',

@@ -119,6 +119,7 @@ const ImageSlider = () => {
           <View style={styles.modalBody}>
             <TouchableOpacity 
               onPress={closeModal} 
+              onPressIn={closeModal}
               style={styles.closeButton}
             >
               <Text style={styles.closeButtonText}>______</Text>
