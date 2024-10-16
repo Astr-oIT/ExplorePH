@@ -68,5 +68,5 @@ const App = () => {
     </SafeAreaView>
   );
 };
-
+// Created by: Luis Gabrielle Estacio 
 export default App;
