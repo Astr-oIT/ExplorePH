@@ -119,9 +119,9 @@ const ImageSlider = () => {
           <View style={styles.modalBody}>
             <TouchableOpacity 
               onPress={closeModal} 
-              style={{ alignSelf: 'flex-end', padding: 10 }}
+              style={styles.closeButton}
             >
-              <Text style={{ fontSize: 18 }}>Close</Text>
+              <Text style={styles.closeButtonText}>______</Text>
             </TouchableOpacity>
             
             {/* Display title and description in the modal */}
