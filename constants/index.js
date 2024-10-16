@@ -26,6 +26,15 @@ export const images = [
       mapUrl: 'https://www.google.com/maps/embed?pb=!4v1728981923853!6m8!1m7!1sCAoSLEFGMVFpcFA1VUFCbEQzclo4dzZsY2hJUy1RSXZ6NGY2ckZvTmRSWUxsdmZY!2m2!1d9.548741882952559!2d123.7742826404618!3f84.8684252928978!4f8.611210918268867!5f0.7820865974627469',
     },
   },
+  {
+    url: 'https://gttp.images.tshiftcdn.com/307215/x/0/15-best-scenic-waterfalls-in-the-philippines-11.jpg?auto=compress%2Cformat&ch=Width%2CDPR&dpr=1&ixlib=php-3.3.0&w=883',
+    title: 'Kaparkan Falls (Abra)',
+    description:
+      'If you’re looking for stunning waterfalls in Luzon, then Kaparkan Falls is worth a look! Kaparkan Falls (also called Mulawin Falls) is located in Tineg Municipality of Benguet, Abra. This waterfall features water flowing to several layers of limestone terraces. These terraces appear like water basins filled with clean and refreshing water.',
+    location: {
+      mapUrl: 'https://www.google.com/maps/embed?pb=!4v1729065989486!6m8!1m7!1sCAoSLEFGMVFpcE1TOWotc2t6aDJQSlJpYXdHeEdRZFVhczZvSDVLN2lpb1dwZUtU!2m2!1d17.78009447203435!2d120.7807732317405!3f204.72187392253466!4f1.86677164491023!5f0.7820865974627469',
+    },
+  },
 ];
   export const categories = [
     {

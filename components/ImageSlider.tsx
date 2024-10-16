@@ -8,6 +8,8 @@ import {
   TouchableOpacity,
   Modal,
   ImageBackground,
+  Button,
+  ActivityIndicator,
 } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import { WebView } from 'react-native-webview'; // Import WebView
@@ -16,6 +18,7 @@ import { useNavigation } from '@react-navigation/native';
 import { images } from '../constants/index';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from './navigation/types';
+import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 
 type ImageSliderNavigationProp = StackNavigationProp<RootStackParamList, 'index'>;
 
@@ -27,6 +30,8 @@ const ImageSlider = () => {
     description: string;
     location: { mapUrl: string };
   } | null>(null);
+
+  const [loading, setLoading] = useState(false);
 
  
   const navigation = useNavigation<ImageSliderNavigationProp>();
@@ -122,7 +127,9 @@ const ImageSlider = () => {
               onPressIn={closeModal}
               style={styles.closeButton}
             >
-              <Text style={styles.closeButtonText}>______</Text>
+              <TouchableOpacity onPress={closeModal} style={styles.closeButton}>
+                <Text style={styles.closeButtonText}>Close</Text>
+              </TouchableOpacity>
             </TouchableOpacity>
             
             {/* Display title and description in the modal */}
@@ -137,7 +144,7 @@ const ImageSlider = () => {
                     {/* Buttons below the map */}
                     <View style={styles.buttonContainer}>
                   <TouchableOpacity style={styles.button}  onPress={() => openSecondModal(selectedImage)} >
-                    <Text style={styles.buttonText}>View</Text>
+                    <Text style={styles.buttonText}><FontAwesome5 name="street-view" size={34} color="white" /></Text>
                   </TouchableOpacity>
                   
                   <TouchableOpacity 
@@ -147,7 +154,7 @@ const ImageSlider = () => {
                       closeModal();
                     }}
                   >
-                    <Text style={styles.buttonText}>Show in Map</Text>
+                    <Text style={styles.buttonText}><FontAwesome5 name="directions" size={34} color="white" /></Text>
                   </TouchableOpacity>
                 </View>
               </View>
@@ -162,22 +169,30 @@ const ImageSlider = () => {
         onRequestClose={toggleModal}
       >
         <View style={styles.modalView}>
-          <Text style={styles.modalText}>This is the modal content</Text>
-          <TouchableOpacity onPress={closeSecondModal}>
-            <Text style={styles.closeButtonText}>Close</Text>
+          {/* <Text style={styles.modalText}>This is the modal content</Text> */}
+          <TouchableOpacity  onPress={closeSecondModal}   onPressIn={closeSecondModal}>
+            <Text style={styles.closeButtonText2}><AntDesign name="close" size={24}  /></Text>
           </TouchableOpacity>
-          <View style={{ width: '100%', height: '100%', backgroundColor: 'blue' }}>
+          {loading && <ActivityIndicator size="large" color="#0000ff" />}
+          <View style={{ width: '100%', height: '95%', backgroundColor: 'blue' }}>
                   {selectedImage && (
                     <WebView
-                      style={{ flex: 1 }} // Ensure the WebView takes up the full space of its container
-                      originWhitelist={['*']}
-                      javaScriptEnabled={true} // Enable JavaScript
-                      onError={(syntheticEvent) => {
-                        const { nativeEvent } = syntheticEvent;
-                        console.warn('WebView error: ', nativeEvent);
-                      }}
-                      onLoadStart={() => console.log('WebView loading started')}
-                      onLoadEnd={() => console.log('WebView loading finished')}
+                    style={{ flex: 1, }} // Ensure the WebView takes up the full space of its container
+                    originWhitelist={['*']}
+                    javaScriptEnabled={true} // Enable JavaScript
+                    onError={(syntheticEvent) => {
+                      const { nativeEvent } = syntheticEvent;
+                      console.warn('WebView error: ', nativeEvent);
+                      setLoading(false);
+                    }}
+                    onLoadStart={() => {
+                      console.log('WebView loading started');
+                      setLoading(true);
+                    }}
+                    onLoadEnd={() => {
+                      console.log('WebView loading finished');
+                      setLoading(false);
+                    }}
                       source={{
                         html: `
                           <!DOCTYPE html>
