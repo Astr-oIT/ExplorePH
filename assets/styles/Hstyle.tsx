@@ -339,17 +339,17 @@ modalContentTopDes: {
     flex: 1, 
     justifyContent: 'center', 
     alignItems: 'center', 
-    height: '69%',
+    height: '50%',
     backgroundColor: 'rgba(0,0,0,0)',
     padding: 0,
   },
   modalBody:{
     marginTop: '105%',
     width: '100%', 
-    height: '68%',
+    height: '50%',
     backgroundColor: 'white', 
     padding: 10, 
-    borderRadius: 25
+    borderRadius: 45
   },
 
   // 2nd Modal
