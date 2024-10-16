@@ -36,6 +36,7 @@ export const images = [
     },
   },
 ];
+
   export const categories = [
     {
       name: 'Beaches',
@@ -75,36 +76,37 @@ export const images = [
       name: 'Waterfalls',
       imageUri: 'https://i0.wp.com/theficklefeet.com/wp-content/uploads/2020/09/kaparkan-falls-3.jpg?resize=845%2C634&ssl=1',
       no1: {
-        title2: '1: Kawasan Falls, Cebu',
-        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        title2: 'Kawasan Falls, Cebu',
+        img:'https://images.cdn-files-a.com/uploads/3205878/2000_610a455301ec4.jpg',
         des: 'A beautiful beach known for its crystal clear waters and stunning limestone cliffs.',
         loc: 'Palawan, Philippines'
       },
       no2: {
-        title2: '2: Boracay',
-        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        title2: 'Tumalog Falls, Cebu',
+        img:'https://d3hukd8e3cn3kb.cloudfront.net/images/posts/tumalog_falls_oslob/1.jpg',
         des: 'Famous for its white sandy beaches and vibrant nightlife.',
         loc: 'Aklan, Philippines'
       },
       no3: {
-        title2: '3: Alona Beach, Panglao',
-        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        title2: 'Cambugahay Falls, Siquijor',
+        img:'https://www.thecoastalcampaign.com/wp-content/uploads/2020/05/Cambugahay-Falls-1-1-819x1024.jpg',
         des: 'A popular beach destination with great diving spots and resorts.',
         loc: 'Bohol, Philippines'
       },
       no4: {
-        title2: '4: Kayangan Lake, Coron',
-        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        title2: 'Pagsanjan Falls, Laguna',
+        img:'https://www.marxtermind.com/wp-content/uploads/2024/07/Pagsanjan-Falls-Laguna-scaled.jpeg',
         des: 'Known for its clear waters and scenic views, perfect for snorkeling and diving.',
         loc: 'Palawan, Philippines'
       },
       no5: {
-        title2: '5: Saud Beach, Luzon',
-        img:'https://www.vacationhive.com/images/hives/2/2-el-nido-gallery-img3.jpg',
+        title2: 'Tinago Falls, Iligan',
+        img:'https://i.pinimg.com/736x/6f/78/c2/6f78c20f0276ebc9b5be0db6cd384f1b.jpg',
         des: 'A serene beach with fine white sand and clear blue waters.',
         loc: 'Ilocos Norte, Philippines'
       }
     },
+    
     {
       name: 'Monument',
       imageUri: 'https://thumbs.dreamstime.com/b/rizal-monument-park-manila-was-built-to-commemorate-filipino-nationalist-jos%C3%A9-was-83317353.jpg',
