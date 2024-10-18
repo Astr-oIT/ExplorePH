@@ -14,7 +14,7 @@ export const images = [
     description:
       'El Nido is a Philippine municipality on Palawan island. It’s known for white-sand beaches, coral reefs and as the gateway to the Bacuit archipelago, a group of islands with steep karst cliffs.',
     location: {
-      mapUrl: 'https://www.google.com/maps/embed?pb=!4v1728981642554!6m8!1m7!1sCAoSLEFGMVFpcE1JaVNMb2J5Z2dkRlBMZTZOTXkxbFJZVllWaGlyVUFWUUM5ai1U!2m2!1d11.0763413080439!2d119.3845600069068!3f78.06329667474661!4f-7.4665727664605726!5f0.7820865974627469',
+      mapUrl: 'https://www.google.com/maps/embed?pb=!4v1729147293772!6m8!1m7!1sCAoSLEFGMVFpcE1DSFpRMDYycHVpeS00eTVTc3NkWnItanZsc0l1OUxqa29sTENn!2m2!1d11.15653698736203!2d119.3215274426005!3f238.828420631301!4f18.241279611175855!5f0.7820865974627469',
     },
   },
   {

@@ -9,6 +9,14 @@ export default StyleSheet.create({
     height: '100%',
     backgroundColor: '#D2E0FB',
   },
+  backgroundVideo: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+    zIndex: -1,
+  },
   scrollContainer: {
     marginTop: 5,
     alignItems: 'center',
