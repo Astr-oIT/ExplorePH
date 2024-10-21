@@ -58,7 +58,7 @@ const TabBar: React.FC<BottomTabBarProps> = ({ state, descriptors, navigation })
             key={route.name}
             style={[
               styles.tabbarItem,
-              isMapTab && styles.mapTabContainer2, 
+              isMapTab && styles.tabbarItem, 
               isFocused && isMapTab && styles.mapTabContainer, // Circle background for focused map tab
             ]}
             accessibilityRole="button"
