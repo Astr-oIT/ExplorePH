@@ -8,7 +8,7 @@ import styles from '@/assets/styles/Mstyle'; // Adjust the import path as needed
 import { useRoute, RouteProp } from '@react-navigation/native';
 import { RootStackParamList } from '@/components/navigation/types'; // Import the types
 
-const GOOGLE_MAPS_APIKEY = 'AIzaSyDMFgjPsxA3RupHpp6ND6cyb2ymQm8htbw';
+const GOOGLE_MAPS_APIKEY = ' ';
 
 type MapScreenRouteProp = RouteProp<RootStackParamList, 'Map'>;
 
