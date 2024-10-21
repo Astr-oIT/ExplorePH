@@ -7,9 +7,8 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import styles from '@/assets/styles/Mstyle'; // Adjust the import path as needed
 import { useRoute, RouteProp } from '@react-navigation/native';
 import { RootStackParamList } from '@/components/navigation/types'; // Import the types
-
-const GOOGLE_MAPS_APIKEY = ' ';
-
+import { GOOGLE_MAPS_APIKEY } from '@env';
+ // Add this line to check if the API key is being imported
 type MapScreenRouteProp = RouteProp<RootStackParamList, 'Map'>;
 
 export default function App() {
